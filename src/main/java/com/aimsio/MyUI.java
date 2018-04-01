@@ -1,6 +1,6 @@
-package aimsio;
+package com.aimsio;
 
-import aimsio.view.ChartView;
+import com.aimsio.view.ChartView;
 import com.vaadin.annotations.Theme;
 import com.vaadin.annotations.Title;
 import com.vaadin.annotations.VaadinServletConfiguration;
@@ -20,7 +20,7 @@ import javax.servlet.annotation.WebServlet;
  */
 @Theme("valo")
 @Title("Aimsio Assignment")
-@Widgetset("aimsio.ChartsWidgetset")
+@Widgetset("com.aimsio.ChartsWidgetset")
 public class MyUI extends UI {
 
     @Override
@@ -31,5 +31,6 @@ public class MyUI extends UI {
     @WebServlet(urlPatterns = "/*", name = "MyUIServlet", asyncSupported = true)
     @VaadinServletConfiguration(ui = MyUI.class, productionMode = true)
     public static class MyUIServlet extends VaadinServlet {
+
     }
 }
