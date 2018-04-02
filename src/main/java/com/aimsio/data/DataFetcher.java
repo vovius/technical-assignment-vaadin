@@ -58,7 +58,7 @@ public class DataFetcher {
     }
 
     public List<String> fetchUNs() {
-        String query = "select distinct AssetUN from assets.`signal`";
+        String query = "select distinct AssetUN from assets.`signal` order by 1";
         Optional<List<String>> result = getResultSet(query, this::mapUNResults);
         return result.orElseGet(Collections::emptyList);
     }
